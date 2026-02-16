@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About Us | Legitimate IT Tech</title>
+    <meta name="description"
+        content="Learn more about Legitimate IT Tech and our commitment to providing professional digital and government services.">
+    <link rel="stylesheet" href="style.css">
+    <link rel="icon" type="image/svg+xml" href="favicon.svg">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;600;700&display=swap" rel="stylesheet">
+    <script src="https://unpkg.com/lucide@latest"></script>
+</head>
+
+<body>
+    <header>
+        <nav>
+            <div class="logo">
+                <span class="logo-icon">L</span>
+                <span class="logo-text">Legit<span>IT</span></span>
+            </div>
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="services.html">Services</a></li>
+                <li><a href="about.html" class="active">About</a></li>
+                <li><a href="contact.html" class="cta-nav">Get Started</a></li>
+            </ul>
+            <div class="menu-toggle" id="mobile-menu">
+                <i data-lucide="menu"></i>
+            </div>
+        </nav>
+    </header>
+
+    <main>
+        <section class="page-header">
+            <div class="header-bg">
+                <img src="https://images.unsplash.com/photo-1497366754035-f200968a6e72?auto=format&fit=crop&w=1920&q=80"
+                    alt="About Us Background">
+                <div class="overlay"></div>
+            </div>
+            <div class="container fade-in">
+                <h1>About <span>Us</span></h1>
+                <p>Learn more about our mission and the team behind Legitimate IT Tech.</p>
+            </div>
+        </section>
+
+        <section class="about-page">
+            <div class="container">
+                <div class="about-content">
+                    <div class="about-text fade-in delay-1">
+                        <h2>Reliable Digital Services You Can Trust</h2>
+                        <p>At Legitimate IT Tech, we bridge the gap between you and essential digital services. Whether
+                            you are
+                            applying for government documents, need high-quality print work, or are looking for
+                            professional web solutions, we are here to help.</p>
+                        <p>With years of experience in the tech and service industry, we pride ourselves on speed,
+                            accuracy, and professional customer service.</p>
+                        <div class="stats">
+                            <div class="stat-item">
+                                <h3>50+</h3>
+                                <p>Services Offered</p>
+                            </div>
+                            <div class="stat-item">
+                                <h3>1000+</h3>
+                                <p>Happy Clients</p>
+                            </div>
+                            <div class="stat-item">
+                                <h3>24/7</h3>
+                                <p>Online Support</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="about-image fade-in delay-2">
+                        <div class="image-wrapper">
+                            <img src="founder.jpeg" alt="Founder of Legitimate IT Tech">
+                            <div class="image-glow"></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="founder-section">
+            <div class="container fade-in">
+                <div class="founder-card">
+                    <div class="founder-info">
+                        <h2>Message from the CEO</h2>
+                        <p>"At Legitimate IT Tech, our goal is to empower individuals and businesses through technology.
+                            We don't just provide services; we provide solutions that drive growth and efficiency in
+                            today's digital world."</p>
+                        <span class="founder-name">— Meshack, CEO & Founder</span>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <div class="container">
+            <div class="footer-bottom">
+                <p>&copy; 2026 Legitimate IT Tech. All rights reserved.</p>
+                <div class="socials">
+                    <a href="#"><i data-lucide="facebook"></i></a>
+                    <a href="#"><i data-lucide="twitter"></i></a>
+                    <a href="#"><i data-lucide="instagram"></i></a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        lucide.createIcons();
+        const mobileMenu = document.getElementById('mobile-menu');
+        const navUl = document.querySelector('nav ul');
+        const icon = mobileMenu.querySelector('i');
+
+        mobileMenu.addEventListener('click', () => {
+            navUl.classList.toggle('active');
+            const isActive = navUl.classList.contains('active');
+            icon.setAttribute('data-lucide', isActive ? 'x' : 'menu');
+            lucide.createIcons();
+        });
+    </script>
+</body>
+
+</html>
